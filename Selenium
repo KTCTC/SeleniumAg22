@@ -1,0 +1,198 @@
+Selenium  
+ 
+1. What is selenium?
+
+   flavers- Selenium IDE, Selenium RC, Selenium WebDriver, Selenium Grid
+   
+2. Browsers supported By Selenium-Chrome,FireFox,Safari,Opera, HtmlUnit (Headless), Edge
+
+3. Advantages of Selenium- Open sourse, Support Multiple OS, cross browser compatability,support multiple languages
+
+3. Limitations of selenium - only UI functionality automation is possible, windows application,Mobile application, execution reports, windows pop ups,captcha 
+
+4. Language - Java,PHP,Python,Perl,Ruby,c#,c++
+
+5.Download selenium Jars--https://www.selenium.dev/downloads/
+
+6. Download OR https://www.selenium.dev/documentation/en/webdriver/driver_requirements/
+   chrome driver--https://chromedriver.chromium.org/downloads
+   firefox driver--https://github.com/mozilla/geckodriver/releases/
+   edge-- https://www.selenium.dev/downloads/
+   
+   All versions - http://selenium-release.storage.googleapis.com/index.html
+   
+7. Locators in selenium
+   
+   ID,Name,ClassName,TagName,LinkText,partialLinkText,Css,
+   
+   html/body/div[1]/div[2]/div[1]/div/div/div/div[2]/div/div[1]/form/div[1]/div[1]/input
+   html/body/div[1]/div[1]/div[1]/div/div/div/div[1]/h2
+   html//form//div//input
+   
+   Xpath(absolute and relative)-single slash,douible slash,*,
+   single attribute=//*[@id='email'], 
+   multiple atribute=//*[@id='email' or @placeholder='Email or phone number'], 
+   contains()-//span[contains(text(),'Commands')] , //span[contains(text(),'Commands')  and @class='rct-title'],//*[contains(@class,'inputtext')]
+   
+   ,starts-with- //span[starts-with(text(),'Commands')],//*[starts-with(@class,'inputtext')]
+   ,parent-//*[@id='email']/parent::div, //span[starts-with(text(),'Commands')]/parent::label
+   ,sibling-//*[@class='rt-table']//*[contains(text(),'Vega')]/following-sibling::div[3],//*[@class='rt-table']//*[contains(text(),'cierra@example.com')]/preceding-sibling::div[1]
+   
+   
+9. findElement and findElements, click, submit, sendkeys, getText, getAttribute, getCssValue , clear
+
+10. Radio buttons using selenium - http://demo.guru99.com/test/radio.html, 
+ 
+
+11. CheckBox using selenium-http://demo.guru99.com/test/radio.html,, isselected and isdisplayed
+11. b. https://demoqa.com/radio-button isenabled, isdisplayed and isselected
+
+12. Drop down using selenium/Select class in selenium-
+    single value - http://demo.guru99.com/test/newtours/register.php
+    multiple value-http://output.jsbin.com/osebed/2  
+13. waits in selenium- implicite(No Such Element Exception) and 
+
+explicite wait(timeoutexception) -https://demoqa.com/radio-button -https://demoqa.com/dynamic-properties 
+
+(alertispresent, elementToBeClickable, ElementToBeSelected, framToBeAvailableAndSwitchToIt,invisiblityOfElement,visiblityOfElement)
+	
+14. Alerts in Selenium-https://demoqa.com/alerts  or  http://demo.guru99.com/test/delete_customer.php
+
+15. Tables in Selenium -http://demo.guru99.com/test/web-table-element.php 
+
+16. Property file in selenium
+
+16.b navigation method
+	
+17. Actions class in selenium-- click, right click, double click (https://demoqa.com/buttons) , move ,(toolsqa) drag and drop--http://demo.guru99.com/test/drag_drop.html, Key board related operations-facebook
+
+18. Frames by index , by name/id , by webElement in selenium
+
+19. windows in selenium
+
+20. File upload in selenium -- http://demo.guru99.com/test/upload/
+
+21. Date picker-toolqa
+
+22. Excel reader using Apache POI - https://poi.apache.org/download.html   // https://archive.apache.org/dist/poi/release/bin/
+		
+23. Install maven
+   For Eclipse - https://toolsqa.com/maven/how-to-install-maven-eclipse-ide/
+   
+   For windows-- 
+                 Link to download zip -https://maven.apache.org/download.cgi
+				 
+				 How to install - https://www.toolsqa.com/maven/how-to-install-maven-on-windows/
+				 
+				 Maven  3.6.3 - https://dlcdn.apache.org/maven/maven-3/3.6.3/binaries/
+			maven-archetype-quickstart	 == org.apache.maven.archetypes
+			
+24. Robot class
+   
+   
+23. TestNG in Selenium (6.14.3) -- https://www.toolsqa.com/testng/install-testng/
+               Add TestNG   -- https://testng.org/testng-eclipse-update-site
+  
+
+ why testNG?
+   Report- test cases excecuted, pass fail or skip
+   Prioroties 
+   Dependendent test cases
+   easily integrated with jenkins and maven
+   Annotations
+   Asserts
+   exclude any test cases
+   parallel excution of test cases
+   
+ 23.1 Annotations in TestNG-@BeforeSuite,@AfterSuite,@BeforeTest,@AfterTest,@BeforeClass,@AfterClass,@BeforeMethod,@AfterMethod,@Test 
+ 
+ 23.2 Asserts in TestNG
+ 
+ 23.3 enable, dependent, invocation , priority
+ 
+ 24. Data provider annotation
+ 
+ 25. screen shot in selenium -- http://www.java2s.com/Code/Jar/o/Downloadorgapachecommonsiojar.htm
+ <dependency>
+    <groupId>commons-io</groupId>
+    <artifactId>commons-io</artifactId>
+    <version>2.4</version>
+</dependency>
+
+26. a. Brocken links https://demoqa.com/links 
+
+26.b Test NG parallel excecution, Test-output folder
+ 
+27. jenkins setup--https://www.guru99.com/maven-jenkins-with-selenium-complete-tutorial.html
+    25.a download https://www.jenkins.io/
+	25.b Global tool configuration -- JAVA and MAVEN
+	25.c Manage plugins - Manage Jenkins and Install TestNG Result Plugin 
+	     post buid action-- publish testng result
+	25.d Manage Jenkins and Install HTML Publisher Plugin
+	     config-postbuild action- publish html report
+	25.e cron job --https://crontab.guru/examples.html
+	25.f eamil notification - https://www.edureka.co/blog/email-notification-in-jenkins/
+	http://localhost:8080//job/DM21/build?token=4567
+Git 
+Initial commite-->
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/KTCTC/Test123.git
+git push -u origin main
+Initial commite end-->
+git status
+git add
+git commit -m "Meaning full message"
+git push
+git pull
+git stash
+git stash pop
+git fetch
+git checkout branch name
+git branch
+git pull origin main
+///////////////
+git reset-- indexed changes/added changes keep in working directory
+git reset soft Head~1 -- commited changes to indexed/added
+git reset hard Head~1-- dont use as it deletes files from working directory
+
+/////
+Pushed changes
+git reset --hard Head~1
+git push -f origin master
+
+or
+git log
+
+git reset --hard 880481f4120b6d7ff087122e1452681510d04a54
+
+
+
+
+----------------------
+NoSuchElementException
+UnsupportedOperationException- tried to deselect value of drop down
+Elementclickinterceptedexception-- while clicking element it was not clickable at perticular coordinates
+NoSuchWindowException
+NoSuchFrameException
+NoAlertPresentException
+ElementNotVisibleException
+ElementNotSelectableException
+TimeoutException
+StaleElementReferenceException 
+
+<!-- https://mvnrepository.com/artifact/com.beust/jcommander -->
+		<dependency>
+			<groupId>com.beust</groupId>
+			<artifactId>jcommander</artifactId>
+			<version>1.27</version>
+		</dependency>
+Geolocation browser===
+options.addArguments("disable-geolocation");
+https://stackoverflow.com/questions/38767551/how-can-i-handle-geo-location-popup-in-browser-using-selenium-webdriver
+
+https://stackoverflow.com/questions/24423092/testng-not-running-in-priority-order-when-dependsonmethods-is-specified#:~:text=All%20independent%20methods%20(that%20do,ordering%2C%20priority%20comes%20into%20picture.
+
+	
