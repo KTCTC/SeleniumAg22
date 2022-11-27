@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class PropertyHelper {
-	Properties propObj;
+	private Properties propObj;
 	public PropertyHelper(String fileName)
 	{
        try {
